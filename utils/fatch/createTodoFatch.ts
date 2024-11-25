@@ -1,9 +1,11 @@
 import axios from "axios";
 
 export const createTodoFatch = async ({
+  taskId,
   title,
   subTitle,
 }: {
+  taskId: number;
   title: string;
   subTitle: string;
 }) => {

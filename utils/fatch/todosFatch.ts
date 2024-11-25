@@ -4,10 +4,10 @@ import { Dispatch, SetStateAction } from "react";
 
 export const todosFatch = async ({
   setTodos,
-  setTask,
+  setTasks,
 }: {
   setTodos: Dispatch<SetStateAction<TodoType[]>>;
-  setTask: Dispatch<SetStateAction<ITask[]>>;
+  setTasks: Dispatch<SetStateAction<ITask[]>>;
 }) => {
   const token = localStorage.getItem("qid");
   if (token) {
@@ -31,6 +31,6 @@ export const todosFatch = async ({
         },
       }
     );
-    setTask(responseTodos.data.tasks);
+    setTasks(responseTasks.data.tasks);
   }
 };
